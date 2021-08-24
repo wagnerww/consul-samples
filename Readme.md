@@ -54,3 +54,10 @@ consul reload
 
   Para listar:
     consul members
+
+### Criptografia:
+  Após criar os servers consul, entrar em um e gerar uma chave:
+  
+  consul keygen
+
+  Esta chave deve ser colocada na propriedade encrypt, dos arquivos server.json
