@@ -63,4 +63,9 @@ consul reload
   Esta chave deve ser colocada na propriedade encrypt, dos arquivos server.json
 
 ### Consul UI:
+  A UI do consul é top, mas para monitorar e facilitar a visualização. Para
+  criação e vinculação dos serviços é recomenado fazer via command line
+  ou via arquivos, conforme os passos acima!
+
+  
   acessar: http://localhost:8085
