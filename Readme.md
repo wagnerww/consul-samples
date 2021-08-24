@@ -1,4 +1,4 @@
-Consul:
+# Consul:
   Tem agente em modo server ou modo client.
 
   - O consul implementa um servidor DNS por padrão
@@ -61,3 +61,6 @@ consul reload
   consul keygen
 
   Esta chave deve ser colocada na propriedade encrypt, dos arquivos server.json
+
+### Consul UI:
+  acessar: http://localhost:8085
