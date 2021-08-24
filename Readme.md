@@ -40,3 +40,6 @@ ifconfig
 mkdir /etc/consul.d
 mkdir /var/lib/consul
 consul agent -bind=192.168.0.5 -data-dir=/var/lib/Consul -config-dir=/etc/consul.d
+
+// Atualizar todos os Serviços
+consul reload
