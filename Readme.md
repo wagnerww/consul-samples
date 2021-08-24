@@ -30,7 +30,7 @@ dig @localhost -p 8600 consul01.node.consul
 ifconfig
 mkdir /etc/consul.d
 mkdir /var/lib/consul
-consul agent -server -bootstrap-expect=3 -node=consulserver03 -bind=192.168.0.4 -data-dir=/var/lib/Consul -config-dir=/etc/consul.d
+consul agent -server -bootstrap-expect=3 -node=consulserver03 -bind=192.168.0.4 -data-dir=/var/lib/consul agent -config-dir=/etc/consul.d
 
 Join de máquinas consul:
 consul join 192.168.0.2:8301
@@ -43,3 +43,14 @@ consul agent -bind=192.168.0.5 -data-dir=/var/lib/Consul -config-dir=/etc/consul
 
 // Atualizar todos os Serviços
 consul reload
+
+### Sincronizando servers via Arquivo(Facilitando a vida):
+- Dentro do diretório servers/server01, apenas configurar o ip dos demais
+  servidores. Após rodar e entrar no container:
+  docker exec -it consul01 sh 
+
+  Executar este comando para configurar o consul, com o json:
+    consul agent -config-dir=/etc/consul.d
+
+  Para listar:
+    consul members
